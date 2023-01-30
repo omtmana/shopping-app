@@ -1,23 +1,21 @@
 import React from "react";
 
-function ShoppingList(): JSX.Element {
-   const items = [
-      {
-         id: 1,
-         product: "Lemon",
-         quantity: 3,
-      },
-      {
-         id: 2,
-         product: "Chicken Breast",
-         quantity: 2
-      }
-   ]
+interface Item {
+   id: number;
+   product: string;
+   quantity: number
+}
+interface ShoppingListProps {
+   items: Item[]
+}
+function ShoppingList(props: ShoppingListProps): JSX.Element {
   return (
     <div>
       <h1> Shopping List</h1>
       <ul>
-        <li> Item 1</li>
+        {props.items.map(item => (
+         <li key={item.id}>{item.product} - {item.quantity}</li>
+        ))}
       </ul>
     </div>
   );
