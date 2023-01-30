@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
-
 import ShoppingList from './components/ShoppingList';
 import Greeter from './components/Greeter';
+import ShoppingListForm from './components/ShoppingListForm';
 import Item from './models/item'
+import './App.css';
+
 
 // interface Item {
 //   id: number;
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <ShoppingList items={items}/>
+      <ShoppingListForm />
     </div>
   );
 }
