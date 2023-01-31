@@ -16,10 +16,10 @@ import './App.css';
 function App() {
    const [items, setItems] = useState<Item[]>([])
 
-   const addItem = (product: string) => {
+   const addItem = (product: string, quantity: number) => {
     console.log("Made to app component")
     console.log(product)
-    setItems([...items, {id: getId(), product, quantity: 1 }])
+    setItems([...items, {id: getId(), product, quantity}])
    }
     //  const items = [
     //    {
