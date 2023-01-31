@@ -14,7 +14,10 @@ import './App.css';
 
 function App() {
    const [items, setItems] = useState<Item[]>([])
-
+   const addItem = (product: string) => {
+    console.log("Made to app component")
+    console.log(product)
+   }
     //  const items = [
     //    {
     //      id: 1,
@@ -31,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <ShoppingList items={items}/>
-      <ShoppingListForm />
+      <ShoppingListForm onAddItem={addItem} />
     </div>
   );
 }
