@@ -2,7 +2,11 @@ import React from "react";
 
 export default function ShoppingListForm(): JSX.Element {
 
-   const handleSubmit = (e : React.FormEvent) => {
+   // const handleSubmit = (e : React.FormEvent) => {
+   //    e.preventDefault()
+   //    console.log("Submitted!!!")
+   // }
+   function handleSubmit(e: React.FormEvent) {
       e.preventDefault()
       console.log("Submitted!!!")
    }
